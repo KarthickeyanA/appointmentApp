@@ -1,0 +1,74 @@
+<button mat-button mat-dialog-close style="margin-left:1186px;">close</button>
+<div class="day">
+    <table>
+        <tr>
+            <td></td>
+            <td id="t1"></td>
+            <td id="t2"></td>
+            <td id="t3"></td>
+            <td id="t4"></td>
+            <td id="t5"></td>
+            <td id="t6"></td>
+            <td id="t7"></td>
+            <td id="t8"></td>
+            <td id="t9"></td>
+            <td id="t10"></td>
+            <td id="t11"></td>
+        </tr>
+    </table>
+    <div (click)="addSlot()">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <p id="p2">Add Slots</p>
+    </div>
+</div>
+
+<p>Morning</p>
+<p id="p1">9:00 AM to 12:00 PM</p>
+<form id="myForm">
+    <input type="radio" class="radio" value="firstSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p3">09:00 AM-09:30 AM</p>
+    <input type="radio" class="radio1" value="secondSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p4">09:30 AM-10:00 AM</p>
+    <input type="radio" class="radio2" value="thirdSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p5">10:00 AM-10:30 AM</p>
+    <input type="radio" class="radio3" value="fourthSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p6">10:30 AM-11:00 AM</p>
+    <input type="radio" class="radio4" value="fifthSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p7">11:00 AM-11:30 PM</p>
+    <input type="radio" class="radio5" value="sixthSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p8">11:30 PM-12:00 PM</p>
+
+    <hr>
+    <p id="eve">Evening</p>
+    <p id="evening">05:00 PM-09:00 PM</p>
+
+    <input type="radio" class="radio6" value="seventhSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p9">05:00 PM-05:30 PM</p>
+    <input type="radio" class="radio7" value="eigthSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p10">05:30 PM-06:00 PM</p>
+    <input type="radio" class="radio8" value="ninthSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p11">06:00 AM-06:30 PM</p>
+    <input type="radio" class="radio9" value="tenthSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p12">06:30 PM-07:00 PM</p>
+    <input type="radio" class="radio10" value="eleventhSLot" (click)="clickSlot($event)" name="slot">
+    <p id="p13">07:00 PM-07:30 PM</p>
+    <input type="radio" class="radio11" value="twelthSlot" (click)="clickSlot($event)" name="slot">
+    <p id="p14">07:30 PM-08:00 PM</p>
+</form>
+<div class="date1">
+    <input type="date" (change)="onDateChange($event)" [value]="selectedDate">
+</div>
+<hr style="top: 465px;left: 275px;position: absolute;">
+
+<div style="top: 500px;left: 500px;position: absolute;">
+    <label>Name: </label><input style="margin-left: 61px;" type="text" [(ngModel)]="name"> <br>
+    <label>Phone number: </label><input type="number" style="margin-left: 7px;margin-top: 20px;"
+        [(ngModel)]="phoneNumber"><br>
+    <label>Age: </label><input type="number" style="margin-left: 71px;margin-top: 20px;" [(ngModel)]="age"><br>
+    <div style="margin-left: 0px;margin-top: 20px;">
+        <label>Gender: </label>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="genderValue">
+            <mat-radio-button *ngFor="let gen of gender" [value]="gen">{{gen}}</mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>

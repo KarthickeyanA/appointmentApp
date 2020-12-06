@@ -1,0 +1,55 @@
+<div class="pro">
+    <div>
+        <div class="assign">
+            <input type="button" (click)="onClickAppointment()" value="Appointment">
+        </div>
+        <div class="assign1"><i class="fa fa-cog" aria-hidden="true"></i>
+            <input type="button" value="Walk-in">
+        </div>
+
+        <div class="img1">
+            <img src="../../assets/images/user.jpg">
+        </div>
+
+        <div class="assign2">
+            <input type="button" value="Home">
+        </div>
+        <select name="name">
+            <option value="Dr.Nishant Clinician">Dr.Nishant Clinician </option>
+        </select>
+        <div class="date">
+            <input type="date" (change)="onDateChange($event)" [value]="today">
+        </div>
+        <div class="queu">
+            <input type="button" value="06 Queu">
+        </div>
+        <div class="earlier">
+            <input type="button" value="02 earlier">
+        </div>
+        <div class="list">
+            <input type="button" value="05 wait list">
+        </div>
+        <div class="show">
+            <input type="button" value="0 no show">
+        </div>
+        <div style="overflow: scroll;">
+            <table id="table">
+                <tr>
+                    <th>Patient</th>
+                    <th>Contact</th>
+                    <th>Appointment</th>
+                    <th>Waited</th>
+                </tr>
+                <tr *ngFor="let item of appList; let i = index" id="tab">
+                    <td>{{item.name}}
+                        <pre>{{item.gender}}, {{item.age}}yrs</pre>
+                    </td>
+                    <td>{{item.phoneNumber}}</td>
+                    <td>{{item.fromTime | date: 'h:mm a'}}</td>
+                    <td>0</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
