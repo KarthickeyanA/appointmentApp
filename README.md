@@ -2,7 +2,7 @@
 Web and Api changes are used in the same git repository
 Run Web and Api changes separately.
 
-#In Application
+# In Application
 Initial data will fetch for current date.
 Changing calendar date will fetch the data from DB.
 Appointment button will open the model popup to add new slot.
